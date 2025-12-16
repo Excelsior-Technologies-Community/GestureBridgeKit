@@ -151,7 +151,7 @@ public struct MultiFingerGestureView: UIViewRepresentable {
         (uiView as? MultiFingerGestureHandler)?.onGesture = onGesture
     }
 }
-enum AppGesture: Identifiable {
+public enum AppGesture: Identifiable {
     case swipeLeft
     case swipeRight
     case swipeUp
