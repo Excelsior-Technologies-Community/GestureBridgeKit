@@ -1,6 +1,20 @@
 import SwiftUI
 import UIKit
 
+public enum AppGesture: Identifiable {
+    case swipeLeft
+    case swipeRight
+    case swipeUp
+    case swipeDown
+    case doubleTap
+    case longPress
+    case twoFingerUp
+    case twoFingerDown
+    case threeFingerUp
+    case threeFingerDown
+
+    public var id: String { "\(self)" }
+}
 // MARK: - Public Gesture Enum (USED BY ContentView)
 public enum GestureAction: Identifiable {
     case twoFingerUp
