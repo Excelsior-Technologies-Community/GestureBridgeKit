@@ -151,3 +151,17 @@ public struct MultiFingerGestureView: UIViewRepresentable {
         (uiView as? MultiFingerGestureHandler)?.onGesture = onGesture
     }
 }
+enum AppGesture: Identifiable {
+    case swipeLeft
+    case swipeRight
+    case swipeUp
+    case swipeDown
+    case doubleTap
+    case longPress
+    case twoFingerUp
+    case twoFingerDown
+    case threeFingerUp
+    case threeFingerDown
+
+    var id: String { "\(self)" }
+}
