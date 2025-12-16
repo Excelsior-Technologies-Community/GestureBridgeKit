@@ -163,5 +163,5 @@ public enum AppGesture: Identifiable {
     case threeFingerUp
     case threeFingerDown
 
-    var id: String { "\(self)" }
+   public var id: String { "\(self)" }
 }
