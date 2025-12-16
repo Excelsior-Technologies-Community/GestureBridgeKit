@@ -368,3 +368,109 @@ struct ContentView: View {
 * All navigation and logic decisions are yours
 * No UIKit code is required in your app
 
+--- 
+## 8. Create Your Own Gesture Views (Important)
+
+GestureBridgeKit **only detects gestures**.
+It does **not** create or manage UI screens for you.
+
+When you route gestures using `.sheet`, `.fullScreenCover`, or navigation, you **must create your own SwiftUI views** for each gesture.
+
+Below is an example set of simple views you can create in your project.
+You can customize these views with your own UI, logic, animations, or data.
+
+---
+
+### Example Gesture Views
+
+```swift
+struct swipeRight: View {
+    var body: some View {
+        Text("swipeRight")
+    }
+}
+
+struct swipeLeft: View {
+    var body: some View {
+        Text("swipeLeft")
+    }
+}
+
+struct swipeUp: View {
+    var body: some View {
+        Text("swipeUp")
+    }
+}
+
+struct swipeDown: View {
+    var body: some View {
+        Text("swipeDown")
+    }
+}
+```
+
+---
+
+### Two-Finger Gesture Views
+
+```swift
+struct TwoFingerUpSheetView: View {
+    var body: some View {
+        Text("2 finger up!")
+    }
+}
+
+struct TwoFingerDownSheetView: View {
+    var body: some View {
+        Text("TwoFingerDownSheetView")
+    }
+}
+```
+
+---
+
+### Three-Finger Gesture Views
+
+```swift
+struct ThreeFingerUpSheetView: View {
+    var body: some View {
+        Text("ThreeFingerUpSheetView")
+    }
+}
+
+struct ThreeFingerDownSheetView: View {
+    var body: some View {
+        Text("ThreeFingerDownSheetView")
+    }
+}
+```
+
+---
+
+### Double Tap and Long Press Views
+
+```swift
+struct DoubleTapSheetView: View {
+    var body: some View {
+        Text("DoubleTapSheetView")
+    }
+}
+
+struct LongPressSheetView: View {
+    var body: some View {
+        Text("LongPressSheetView")
+    }
+}
+```
+
+---
+
+## Final Notes
+
+* You are free to rename these views
+* You can replace `Text` with any complex UI
+* You can pass data into these views
+* You can use `.sheet`, `.fullScreenCover`, or navigation
+* GestureBridgeKit does not limit how you handle gestures
+
+ 
